@@ -21,13 +21,21 @@ class Home extends StatelessWidget {
           centerTitle: true,
           backgroundColor: Colors.blue[600],
         ),
-        body: Center(
-          child: IconButton(
-            onPressed: () {print('Icon clicked');},
-            icon: Icon(Icons.alternate_email),
-            color: Colors.amber
-          ),
-          ),
+        body: Row(
+          children: [
+            Text('Hello world')
+            Container(
+              
+            )
+          ],
+        ),
+
+
+
+        floatingActionButton: FloatingActionButton(onPressed: (){},
+        backgroundColor: Colors.blue[600],
+        child: Text('Click',style: TextStyle(color: Colors.white),),
+        ),
         );
   }
 }
