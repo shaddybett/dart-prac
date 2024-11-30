@@ -24,9 +24,10 @@ class Home extends StatelessWidget {
         body: Center(
           child: IconButton(
             onPressed: () {print('Icon clicked');},
-            icon: Icon(Icons.alternate_email)
-          )
-          )
+            icon: Icon(Icons.alternate_email),
+            color: Colors.amber
+          ),
+          ),
         );
   }
 }
