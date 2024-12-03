@@ -90,6 +90,10 @@ class Home extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(
+            flex: 3,
+            child: Image.asset('girl.jpeg')
+            ),
+          Expanded(
             flex: 1,
             child: Container(
               padding: EdgeInsets.all(30.0),
