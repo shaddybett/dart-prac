@@ -78,8 +78,19 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Carpe Diem'),
+        backgroundColor: Colors.blueAccent,
+        title: Text('Carpe Diem',style: TextStyle(
+          color: Colors.white,
+          fontWeight: FontWeight.bold, 
+        ),),
         centerTitle: true,
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          
+        ],
       ),
     );
   }
