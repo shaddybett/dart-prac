@@ -89,7 +89,28 @@ class Home extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.cyan,
+              child: Text('1'),
+            )),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(30.0),
+              color: Colors.teal,
+              child: Text('2'),
+            )),
+          Expanded(
+            flex: 1,
+            child: Container(
+              color: Colors.pinkAccent,
+              padding: EdgeInsets.all(30.0),
+              child: Text('3'),
+            )
+            )
         ],
       ),
     );
