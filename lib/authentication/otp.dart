@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 
 class OtpScreen extends StatelessWidget {
   final String verificationCode;
-  const OtpScreen({super.key});
+  const OtpScreen({Key? key, required this.verificationCode}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('This is otp'),
+        title: Text('OTP SCREEN'),
       ),
       body: Center(
-        child: Text('Hello'),
+        child: Text('Verification Code: $verificationCode'),
       ),
     );
   }
