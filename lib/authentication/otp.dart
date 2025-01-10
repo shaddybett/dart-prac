@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class OtpScreen extends StatelessWidget {
+  final String verificationCode;
   const OtpScreen({super.key});
 
   @override
