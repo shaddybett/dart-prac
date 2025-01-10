@@ -8,7 +8,7 @@ class OtpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('OTP SCREEN'),
+        title: Text('OTP Screen'),
       ),
       body: Center(
         child: Text('Verification Code: $verificationCode'),
