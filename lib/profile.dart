@@ -14,10 +14,10 @@ class _ProfileState extends State<Profile> {
       body: Column(
         children: [
           Text('Profile'),
-          Image.asset(girl.jpeg),
+          // Image.asset(girl.jpeg),
           Text('Clinton Sang')
         ],
       ),
     );
   }
-}
+} 
