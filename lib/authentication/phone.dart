@@ -42,33 +42,35 @@ class _PhoneScreenState extends State<PhoneScreen> {
     await prefs.setString('phone', phone);
   }
 
+
   void initiateSignIn() {
     validatePhone(phoneController.text);
     if (validPhone) {
       _savePhone(phoneNum);
       setState(() {
         isLoading = true;
+        AppRouter.otpscreen;
       });
-      auth.signInWithPhone(
-        phoneNum,
-        context,
-        (verificationId, resendToken) {
-          setState(() {
-            isLoading = false;
-          });
-          Navigator.pushNamed(
-            context,
-            AppRouter.otpscreen,
-            // arguments: verificationId,
-          );
-        },
-        (errorMessage) {
-          setState(() {
-            isLoading = false;
-          });
-          showCustomSnackbar(context, errorMessage);
-        },
-      );
+      // auth.signInWithPhone(
+      //   phoneNum,
+      //   context,
+      //   (verificationId, resendToken) {
+      //     setState(() {
+      //       isLoading = false;
+      //     });
+      //     Navigator.pushNamed(
+      //       context,
+      //       AppRouter.otpscreen,
+      //       // arguments: verificationId,
+      //     );
+      //   },
+      //   (errorMessage) {
+      //     setState(() {
+      //       isLoading = false;
+      //     });
+      //     showCustomSnackbar(context, errorMessage);
+      //   },
+      // );
     } else {
       showCustomSnackbar(context, 'Please enter a valid phone number (9 digits)');
     }
