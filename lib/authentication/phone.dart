@@ -59,6 +59,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
       Navigator.pushNamed(
         context,
         AppRouter.otpscreen,
+        arguments: "123456",
       );
       // auth.signInWithPhone(
       //   phoneNum,
