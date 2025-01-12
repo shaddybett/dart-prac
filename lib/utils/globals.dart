@@ -24,7 +24,7 @@ class PocketWiseLogo extends StatelessWidget {
             child: Container(
               width: 50,
               height: 50,
-              child: Image.asset('assets/vector.png '),
+              child: Image.asset('assets/vector.png'),
             ),
           )
         : Align(
