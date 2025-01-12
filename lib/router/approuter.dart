@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import '../authentication/phone.dart';
 import '../authentication/otp.dart';
+import '../authentication/EnterKYCscreen.dart';
 
 class AppRouter {
   static const String phone = "/phone";
   static const String otpscreen = "/otpscreen";
+  static const String kycpage = "/kycpage";
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     final args = settings.arguments;
@@ -14,6 +16,8 @@ class AppRouter {
         return _slideRoute(PhoneScreen());
       case otpscreen:
         return _slideRoute(OtpScreen(verificationCode: args as String));
+      case kycpage:
+        return _slideRoute(EnterKYCPage());
       default:
         return _slideRoute(
           Scaffold(
