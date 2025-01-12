@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
  
-  Color primaryColor =   Color(0xff7400E0);
-  // MaterialStateProperty primaryColor2 =   Color(0xffFFFFFF);
+  Color primaryColor =   Color(0xff33AC66);
   Color secondaryColor = Color.fromARGB(255, 117, 116, 116);
   Color black = Color.fromARGB(255, 0, 0, 0);
 

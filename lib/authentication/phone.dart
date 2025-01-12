@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-// import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:grocery_app/repository/auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -42,33 +42,44 @@ class _PhoneScreenState extends State<PhoneScreen> {
     await prefs.setString('phone', phone);
   }
 
-  void initiateSignIn() {
+
+  void initiateSignIn() async {
     validatePhone(phoneController.text);
     if (validPhone) {
       _savePhone(phoneNum);
       setState(() {
         isLoading = true;
       });
-      auth.signInWithPhone(
-        phoneNum,
+
+      await Future.delayed(const Duration(seconds: 2));
+    // Stop loading and navigate to OTP screen
+      setState(() {
+        isLoading = false;
+      });
+      Navigator.pushNamed(
         context,
-        (verificationId, resendToken) {
-          setState(() {
-            isLoading = false;
-          });
-          Navigator.pushNamed(
-            context,
-            AppRouter.otpscreen,
-            arguments: verificationId,
-          );
-        },
-        (errorMessage) {
-          setState(() {
-            isLoading = false;
-          });
-          showCustomSnackbar(context, errorMessage);
-        },
+        AppRouter.otpscreen,
       );
+      // auth.signInWithPhone(
+      //   phoneNum,
+      //   context,
+      //   (verificationId, resendToken) {
+      //     setState(() {
+      //       isLoading = false;
+      //     });
+          // Navigator.pushNamed(
+          //   context,
+          //   AppRouter.otpscreen,
+          //   // arguments: verificationId,
+          // );
+      //   },
+      //   (errorMessage) {
+      //     setState(() {
+      //       isLoading = false;
+      //     });
+      //     showCustomSnackbar(context, errorMessage);
+      //   },
+      // );
     } else {
       showCustomSnackbar(context, 'Please enter a valid phone number (9 digits)');
     }
@@ -84,6 +95,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
       children: Column(
         children: [
           Phonefield(phoneController: phoneController),
+          const SizedBox(height: 20),
           isLoading ? CircularProgressIndicator() : Container(),
         ],
       ),

@@ -4,7 +4,7 @@ import '../authentication/otp.dart';
 
 class AppRouter {
   static const String phone = "/phone";
-  static const String otpscreen = "/otp";
+  static const String otpscreen = "/otpscreen";
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     final args = settings.arguments;
