@@ -46,7 +46,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
   void initiateSignIn() async {
     validatePhone(phoneController.text);
     if (validPhone) {
-      _savePhone(phoneNum);
+      await _savePhone(phoneNum);
       setState(() {
         isLoading = true;
       });
