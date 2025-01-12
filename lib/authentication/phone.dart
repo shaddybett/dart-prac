@@ -43,14 +43,23 @@ class _PhoneScreenState extends State<PhoneScreen> {
   }
 
 
-  void initiateSignIn() {
+  void initiateSignIn() async {
     validatePhone(phoneController.text);
     if (validPhone) {
       _savePhone(phoneNum);
       setState(() {
         isLoading = true;
-        AppRouter.otpscreen;
       });
+
+      await Future.delayed(const Duration(seconds: 2));
+    // Stop loading and navigate to OTP screen
+      setState(() {
+        isLoading = false;
+      });
+      Navigator.pushNamed(
+        context,
+        AppRouter.otpscreen,
+      );
       // auth.signInWithPhone(
       //   phoneNum,
       //   context,
@@ -58,11 +67,11 @@ class _PhoneScreenState extends State<PhoneScreen> {
       //     setState(() {
       //       isLoading = false;
       //     });
-      //     Navigator.pushNamed(
-      //       context,
-      //       AppRouter.otpscreen,
-      //       // arguments: verificationId,
-      //     );
+          // Navigator.pushNamed(
+          //   context,
+          //   AppRouter.otpscreen,
+          //   // arguments: verificationId,
+          // );
       //   },
       //   (errorMessage) {
       //     setState(() {
@@ -86,6 +95,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
       children: Column(
         children: [
           Phonefield(phoneController: phoneController),
+          const SizedBox(height: 20),
           isLoading ? CircularProgressIndicator() : Container(),
         ],
       ),
