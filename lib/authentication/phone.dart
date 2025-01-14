@@ -52,7 +52,6 @@ class _PhoneScreenState extends State<PhoneScreen> {
       });
 
       await Future.delayed(const Duration(seconds: 2));
-    // Stop loading and navigate to OTP screen
       setState(() {
         isLoading = false;
       });
