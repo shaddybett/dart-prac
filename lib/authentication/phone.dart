@@ -42,7 +42,6 @@ class _PhoneScreenState extends State<PhoneScreen> {
     await prefs.setString('phone', phone);
   }
 
-
   void initiateSignIn() async {
     validatePhone(phoneController.text);
     if (validPhone) {
@@ -91,7 +90,7 @@ class _PhoneScreenState extends State<PhoneScreen> {
       pagetitle: 'register.register'.tr(),
       onButtonPressed: initiateSignIn,
       buttontext: "home.continue".tr(),
-      pagedescription: "register.descriptionr".tr(),
+      pagedescription: "register.description".tr(),
       children: Column(
         children: [
           Phonefield(phoneController: phoneController),

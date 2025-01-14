@@ -96,3 +96,33 @@ class AuthPageManager extends StatelessWidget {
     );
   }
 }
+
+class Customelevatedbutton extends StatelessWidget {
+  final String text;
+  final Color textcolor;
+  final VoidCallback onPressed;
+  final Color? backgroundColor; // Optional background color for the button
+
+  const Customelevatedbutton({
+    super.key,
+    required this.text,
+    required this.textcolor,
+    required this.onPressed,
+    this.backgroundColor,
+    
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: backgroundColor ?? Theme.of(context).primaryColor, // Button color
+      ),
+      onPressed: onPressed,
+      child: Text(
+        text,
+        style: TextStyle(color: textcolor), // Use the provided text color
+      ),
+    );
+  }
+}
