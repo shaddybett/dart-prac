@@ -12,9 +12,9 @@ import 'package:flutter/services.dart';
 // ExpenseRepository expenseRepository = ExpenseRepository();
 // IncomeRepository incomeRepository = IncomeRepository();
 
-class PocketWiseLogo extends StatelessWidget {
+class GroceryAppLogo extends StatelessWidget {
   final bool darkMode;
-  const PocketWiseLogo({super.key, required this.darkMode});
+  const GroceryAppLogo({super.key, required this.darkMode});
 
   @override
   Widget build(BuildContext context) {

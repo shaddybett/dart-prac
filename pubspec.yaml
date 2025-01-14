@@ -62,7 +62,6 @@ fonts:
       - asset: assets/fonts/SpaceGrotesk-Light.ttf
       - asset: assets/fonts/SpaceGrotesk-Medium.ttf
       - asset: assets/fonts/SpaceGrotesk-SemiBold.ttf
-
 dev_dependencies:
   flutter_test:
     sdk: flutter

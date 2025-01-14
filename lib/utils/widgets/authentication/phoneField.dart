@@ -40,7 +40,7 @@ class _PhonefieldState extends State<Phonefield> {
           borderRadius: const BorderRadius.all(Radius.circular(10.0)),
           borderSide: BorderSide(width: 1, color: primaryColor),
         ),
-        labelText: "enter phone".tr(),
+        labelText: "register.enter_phone".tr(),
         hintText: 'e.g 700000000',
         hintStyle: AppTextStyles.smallLight.copyWith(color: Colors.grey),
       ),
