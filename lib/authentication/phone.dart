@@ -1,5 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 import 'package:grocery_app/repository/auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -42,23 +42,22 @@ class _PhoneScreenState extends State<PhoneScreen> {
     await prefs.setString('phone', phone);
   }
 
-
   void initiateSignIn() async {
     validatePhone(phoneController.text);
     if (validPhone) {
-      _savePhone(phoneNum);
+      await _savePhone(phoneNum);
       setState(() {
         isLoading = true;
       });
 
       await Future.delayed(const Duration(seconds: 2));
-    // Stop loading and navigate to OTP screen
       setState(() {
         isLoading = false;
       });
       Navigator.pushNamed(
         context,
         AppRouter.otpscreen,
+        arguments: "123456",
       );
       // auth.signInWithPhone(
       //   phoneNum,
@@ -88,10 +87,10 @@ class _PhoneScreenState extends State<PhoneScreen> {
   @override
   Widget build(BuildContext context) {
     return AuthPageManager(
-      pagetitle: 'register'.tr(),
+      pagetitle: 'register.register'.tr(),
       onButtonPressed: initiateSignIn,
-      buttontext: "continue".tr(),
-      pagedescription: "Enter your phone number".tr(),
+      buttontext: "home.continue".tr(),
+      pagedescription: "register.description".tr(),
       children: Column(
         children: [
           Phonefield(phoneController: phoneController),

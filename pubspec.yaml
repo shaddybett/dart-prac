@@ -55,14 +55,13 @@ dependencies:
   video_player: ^2.9.2
 
 fonts:
-  - family: PlayfairDisplay
+  - family: SpaceGrotesk
     fonts:
-      - asset: fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf
-
-  - family: IndieFlower
-    fonts:
-      - asset: fonts/Indie_Flower/IndieFlower-Regular.ttf
-
+      - asset: assets/fonts/SpaceGrotesk-Regular.ttf
+      - asset: assets/fonts/SpaceGrotesk-Bold.ttf
+      - asset: assets/fonts/SpaceGrotesk-Light.ttf
+      - asset: assets/fonts/SpaceGrotesk-Medium.ttf
+      - asset: assets/fonts/SpaceGrotesk-SemiBold.ttf
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -87,4 +86,6 @@ flutter:
   assets:
     - assets/vector.png
     - assets/girl.jpeg
+    - assets/lang/en.json
+    - assets/lang/sw.json
 
