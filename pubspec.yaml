@@ -55,7 +55,7 @@ dependencies:
   video_player: ^2.9.2
 
 fonts:
-  - family: PlayfairDisplay
+  - family: SpaceGrotesk
     fonts:
       - asset: assets/fonts/SpaceGrotesk-Regular.ttf
       - asset: assets/fonts/SpaceGrotesk-Bold.ttf
