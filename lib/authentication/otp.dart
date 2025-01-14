@@ -12,12 +12,12 @@ class OtpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AuthPageManager(
-      pagetitle: 'verify phone number'.tr(),
+      pagetitle: 'register.verify_phone'.tr(),
       onButtonPressed: () {
         Navigator.pushNamed(context, AppRouter.kycpage);
       },
-      // buttontext: "home.continue".tr(),
-      pagedescription: "Enter otp".tr(),
+      buttontext: "home.continue".tr(),
+      pagedescription: "register.enter_otp".tr(),
       children: SingleChildScrollView(
         child: Container(
           height: MediaQuery.of(context).size.height * .6,
