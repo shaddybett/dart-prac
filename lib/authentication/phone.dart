@@ -88,10 +88,10 @@ class _PhoneScreenState extends State<PhoneScreen> {
   @override
   Widget build(BuildContext context) {
     return AuthPageManager(
-      pagetitle: 'register'.tr(),
+      pagetitle: 'register.register'.tr(),
       onButtonPressed: initiateSignIn,
-      buttontext: "continue".tr(),
-      pagedescription: "Enter your phone number".tr(),
+      buttontext: "home.continue".tr(),
+      pagedescription: "register.descriptionr".tr(),
       children: Column(
         children: [
           Phonefield(phoneController: phoneController),

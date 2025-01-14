@@ -36,8 +36,7 @@ void main() {
       //     ChangeNotifierProvider(create: (_) => CategoryProvider()),
       //   ],
         child: const MyApp(),
-      ),
-    );
+      ));
   }, (dynamic error, dynamic stack) {});
 }
 
