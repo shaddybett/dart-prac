@@ -20,6 +20,7 @@ class AuthPageManager extends StatelessWidget {
     required this.pagedescription,
     this.buttontext = "Continue",
     required this.onButtonPressed,
+    
   });
 
   @override
