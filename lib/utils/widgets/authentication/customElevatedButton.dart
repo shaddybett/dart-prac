@@ -15,7 +15,6 @@ class Customelevatedbutton extends StatelessWidget {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        // width: MediaQuery.of(context).size.width,
         height: 50,
         decoration: ShapeDecoration(
       color: color,
